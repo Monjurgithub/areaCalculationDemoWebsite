@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geometry-genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="px-9">
+        <div class="navbar bg-base-100 md:px-28 lg:px-28 mt-9 bg-amber-400 md:p-4 lg:p-4">
+            <div class="navbar-start">
+                <a class="btn btn-ghost normal-case text-base text-left">Interactive <br>
+                    Geometry Genius</a>
+            </div>
+            <div class="navbar-end text-base">
+                <a id="blog-btn" class="btn">blog</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="px-8 flex flex-col md:flex-row lg:flex-row">
+            <div class="take-area-input mt-9 md:w-[70%] lg:w-[70%] grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/triangle.png" alt="" class="rounded" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="triangleName" class="card-title">Triangle</h2>
+                        <p>Area (A) = 0.5 X b X h</p>
+                        <div class="flex px-4 justify-center">
+                            <input id="triangle-input-b" type="text" class="input input-bordered input-sm w-[30%]">
+                            <h6 class="p-1">cm</h6>
+                            <input id="triangle-input-h" type="text" class="input input-bordered input-sm  w-[30%]">
+                            <h6 class="p-1">cm</h6>
+                        </div>
+                        <div class="card-actions mt-4">
+                            <button id="btn-triangle" class="btn btn-primary btn-wide">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/rectangle.png" alt="" class="rounded" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="rectangle-Name" class="card-title">Rectangle</h2>
+                        <p>Area (A) = w X I</p>
+                        <div class="flex px-4 justify-center">
+                            <input id="W-rectangle" type="text" class="input input-bordered input-sm w-[30%]">
+                            <h6 class="p-1">cm</h6>
+                            <input  id="I-rectangle" type="text" class="input input-bordered input-sm  w-[30%]">
+                            <h6 class="p-1">cm</h6>
+                        </div>
+                        <div class="card-actions mt-4">
+                            <button id="btn-rectangle" class="btn btn-primary btn-wide">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/parallelogram.png" alt="" class="rounded" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="Parallelogram-name" class="card-title">Parallelogram</h2>
+                        <p>Area (A) = b X h</p>
+                        <div class="flex px-4 justify-center">
+                            <h6 class="p-1">b=</h6>
+                            <input id="Parallelogram-b" type="text" class="input input-bordered input-sm w-[30%]" placeholder="10cm">
+                            <h6 class="p-1">h=</h6>
+                            <input id="Parallelogram-h" type="text" class="input input-bordered input-sm  w-[30%]" placeholder="12cm">
+                        </div>
+                        <div class="card-actions mt-4">
+                            <button id="Parallelogram-btn" class="btn btn-primary btn-wide">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/rhombus.png" alt="" class="rounded" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="rhombus-name" class="card-title">Rhombus</h2>
+                        <p>Area (A) = 0.5 X d1 X d2</p>
+                        <div class="flex px-4 justify-center">
+                            <input id="rhombus-d1" type="text" class="input input-bordered input-sm w-[30%]">
+                            <h6 class="p-1">cm</h6>
+                            <input id="rhombus-b2" type="text" class="input input-bordered input-sm  w-[30%]">
+                            <h6 class="p-1">cm</h6>
+                        </div>
+                        <div class="card-actions mt-4">
+                            <button id="rhombus-btn" class="btn btn-primary btn-wide">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/pentagon.png" alt="" class="rounded" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="Pentagon-name" class="card-title">Pentagon</h2>
+                        <p>Area (A) = 0.5 X p X b</p>
+                        <div class="flex">
+                            <h5>p=</h5>
+                            <span id="Pentagon-first-value">6</span>
+                            <h5>cm,</h5>
+                            <h4>b=</h4>
+                            <span id="Pentagon-2nd-value">10</span>
+                            <h5>cm</h5>
+                        </div>
+                        <div class="card-actions mt-4">
+                            <button id="Pentagon-btn" class="btn btn-primary btn-wide">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/ellipse.png" alt="" class="rounded" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="ellipse-name" class="card-title">Ellipse</h2>
+                        <p>Area (A) = &#8719 ab</p>
+                        <div class="flex px-4 justify-center">
+                            <h5>a=</h5>
+                            <span id="ellipse-1st-value">10</span>
+                            <h5>cm,</h5>
+                            <h4>b=</h4>
+                            <span id="ellipse-2nd-value">4</span>
+                            <h5>cm</h5>
+    
+                        </div>
+                        <div class="card-actions mt-4">
+                            <button id="ellipse-btn" class="btn btn-primary btn-wide">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="area-calculation md:w-[30%] lg:w-[30%] ml-4 mt-9 pb-4">
+                <h1 class="font-bold text-xl md:text-3xl lg:text-3xl text-center md:text-center lg:text-center">Area Calculation</h1>
+                <hr class="bg-gray-200 border-2 dark:bg-gray-700">
+                <div class="overflow-x-auto">
+                    <table class="table w-full">
+                        <tbody id="table-body">
+    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
+    <script src="js/pageChnage.js"></script>
+    <script src="js/color.js"></script>
+</body>
+
+</html>
